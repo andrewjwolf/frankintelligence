@@ -15,3 +15,35 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::resource('projects', 'ProjectsController');
+
+Route::resource('user_groups', 'User_groupsController');
+
+Route::resource('repositories', 'RepositoriesController');
+
+Route::resource('users', 'UsersController');
+
+Route::resource('fieldtypes', 'FieldtypesController');
+
+Route::resource('field_types', 'Field_typesController');
+
+Route::resource('fields', 'FieldsController');
+
+Route::resource('boards', 'BoardsController');
+
+Route::resource('columns', 'ColumnsController');
+
+Route::resource('statuses', 'StatusesController');
+
+Route::resource('priorities', 'PrioritiesController');
+
+Route::resource('tasks', 'TasksController');
+
+Route::resource('comments', 'CommentsController');
+
+Route::resource('attachments', 'AttachmentsController');
+
+Route::resource('swimlines', 'SwimlinesController');
+
+Route::resource('tags', 'TagsController');

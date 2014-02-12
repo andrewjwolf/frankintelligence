@@ -23,91 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2014_02_12_012323_create_project_fields_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012323_create_project_fields_table.php">
+      <file leaf-file-name="2014_02_12_212531_create_task_tags_table.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_212531_create_task_tags_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_012926_create_swimlines_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012926_create_swimlines_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="35" selection-start="365" selection-end="365" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_013133_create_board_swimlines_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013133_create_board_swimlines_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="35" selection-start="389" selection-end="389" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_013504_create_task_types_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013504_create_task_types_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_013931_create_task_comments_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013931_create_task_comments_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="33" selection-start="424" selection-end="424" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_014000_create_task_attachments_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014000_create_task_attachments_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="11" selection-start="636" selection-end="636" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_011533_create_attachments_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachments_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="38" selection-start="458" selection-end="458" vertical-scroll-proportion="-8.153846" vertical-offset="111" max-vertical-offset="697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_014051_create_task_links_table.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014051_create_task_links_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="600" selection-end="600" vertical-scroll-proportion="0.60714287" vertical-offset="51" max-vertical-offset="765">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_014353_create_tags_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014353_create_tags_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_02_12_014501_create_task_tags_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014501_create_task_tags_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="12" selection-start="518" selection-end="518" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
+            <state line="21" column="14" selection-start="522" selection-end="522" vertical-scroll-proportion="0.62271065" vertical-offset="0" max-vertical-offset="714">
               <folding />
             </state>
           </provider>
@@ -123,22 +42,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013243_create_project_tasks_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_003727_create_projects_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_005309_create_fields_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_005741_create_boards_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_010505_create_tasks_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_011408_create_comments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012036_create_project_user_groups_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012127_create_user_group_users_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012323_create_project_fields_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012926_create_swimlines_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013133_create_board_swimlines_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014501_create_task_tags_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013931_create_task_comments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014000_create_task_attachments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014051_create_task_links_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_205103_create_project_fields_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/ProjectFieldsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/BoardColumnsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_210920_create_swimlines_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_210921_create_board_swimlines_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/BoardSwimlinesTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TaskTypesSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TaskCommentsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_210923_create_task_comments_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/SwimlinesTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_210924_create_task_attachments_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TaskAttachmentsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TagsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TaskTagsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_212531_create_task_tags_table.php" />
       </list>
     </option>
   </component>
@@ -221,7 +140,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frankintelligence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frankintelligence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frankintelligence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -247,6 +224,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frankintelligence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -256,7 +251,7 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistory" value="create_task_types_table&#10;CreateTaskTypesTable&#10;create_attachmen&#10;create_attachments_table&#10;create_task_link_commen&#10;assignment&#10;assignme&#10;status&#10;type" />
-    <property name="last_opened_file_path" value="A:/ameriliv" />
+    <property name="last_opened_file_path" value="A:/test" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="PublishConfig">
@@ -283,6 +278,12 @@
         </serverdata>
       </server>
     </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\frankintelligence\app\database\seeds" />
+      <recent name="A:\frankintelligence\app\database\migrations" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -316,7 +317,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33481646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27321237" sideWeight="0.66518354" order="0" side_tool="false" content_ui="combo" />
@@ -350,114 +351,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_005741_create_boards_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_205104_create_board_columns_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="29" selection-start="622" selection-end="622" vertical-scroll-proportion="-13.153846" vertical-offset="168" max-vertical-offset="782">
+        <state line="11" column="7" selection-start="201" selection-end="201" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_005308_create_field_types_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/BoardColumnsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="52" selection-start="271" selection-end="271" vertical-scroll-proportion="0.35714287" vertical-offset="26" max-vertical-offset="646">
+        <state line="15" column="60" selection-start="422" selection-end="422" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="425">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_010505_create_tasks_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_210921_create_board_swimlines_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="384" selection-end="399" vertical-scroll-proportion="-5.5384617" vertical-offset="145" max-vertical-offset="867">
+        <state line="19" column="0" selection-start="431" selection-end="431" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_011408_create_comments_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/BoardSwimlinesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="-10.115385" vertical-offset="43" max-vertical-offset="697">
+        <state line="2" column="6" selection-start="13" selection-end="38" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="425">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012036_create_project_user_groups_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_210922_create_task_types_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="341" selection-end="356" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="714">
+        <state line="19" column="5" selection-start="373" selection-end="373" vertical-scroll-proportion="-7.8461537" vertical-offset="102" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012127_create_user_group_users_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TaskCommentsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="47" selection-start="585" selection-end="585" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
+        <state line="17" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.529304" vertical-offset="0" max-vertical-offset="546">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012323_create_project_fields_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_210923_create_task_comments_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="714">
+        <state line="21" column="14" selection-start="534" selection-end="534" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012926_create_swimlines_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_210920_create_swimlines_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="35" selection-start="365" selection-end="365" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
+        <state line="20" column="14" selection-start="419" selection-end="419" vertical-scroll-proportion="0.36263737" vertical-offset="125" max-vertical-offset="697">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013133_create_board_swimlines_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TaskTypesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="35" selection-start="389" selection-end="389" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="714">
+        <state line="10" column="12" selection-start="221" selection-end="247" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013504_create_task_types_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/SwimlinesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+        <state line="16" column="48" selection-start="478" selection-end="478" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014353_create_tags_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_210924_create_task_attachments_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+        <state line="21" column="14" selection-start="543" selection-end="543" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014501_create_task_tags_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TagsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="12" selection-start="518" selection-end="518" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
+        <state line="17" column="0" selection-start="401" selection-end="401" vertical-scroll-proportion="0.529304" vertical-offset="0" max-vertical-offset="546">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013931_create_task_comments_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TaskAttachmentsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="424" selection-end="424" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="714">
+        <state line="11" column="52" selection-start="332" selection-end="332" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="425">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachments_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TaskTagsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="458" selection-end="458" vertical-scroll-proportion="-8.153846" vertical-offset="111" max-vertical-offset="697">
+        <state line="2" column="6" selection-start="13" selection-end="32" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="442">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014000_create_task_attachments_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="636" selection-end="636" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="714">
+        <state line="28" column="49" selection-start="778" selection-end="778" vertical-scroll-proportion="0.61172163" vertical-offset="142" max-vertical-offset="782">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014051_create_task_links_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_212531_create_task_tags_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="600" selection-end="600" vertical-scroll-proportion="0.60714287" vertical-offset="51" max-vertical-offset="765">
+        <state line="21" column="14" selection-start="522" selection-end="522" vertical-scroll-proportion="0.62271065" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
