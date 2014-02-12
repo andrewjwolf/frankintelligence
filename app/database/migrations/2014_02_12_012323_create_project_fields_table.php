@@ -18,7 +18,7 @@ class CreateProjectFieldsTable extends Migration {
 			$table->integer('field_id');
 			$table->timestamps();
 
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            //$table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
 		});
 	}
 
@@ -30,7 +30,7 @@ class CreateProjectFieldsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('project_fields');
+        Schema::dropIfExists('project_fields');
 	}
 
 }

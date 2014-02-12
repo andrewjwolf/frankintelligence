@@ -19,7 +19,7 @@ class CreateBoardsTable extends Migration {
 			$table->text('description')->nullable();
 			$table->timestamps();
 
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            //$table->foreign('project_id')->references('id')->on('project_boards')->onDelete('cascade');
 		});
 	}
 
@@ -31,7 +31,7 @@ class CreateBoardsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('boards');
+        Schema::dropIfExists('boards');
 	}
 
 }

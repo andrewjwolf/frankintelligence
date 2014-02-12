@@ -21,7 +21,7 @@ class CreateFieldsTable extends Migration {
 			$table->string('empty_value')->nullable();
 			$table->timestamps();
 
-            $table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
+//            $table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
 		});
 	}
 
@@ -33,7 +33,7 @@ class CreateFieldsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('fields');
+        Schema::dropIfExists('fields');
 	}
 
 }

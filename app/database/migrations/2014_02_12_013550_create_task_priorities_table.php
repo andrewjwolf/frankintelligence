@@ -27,7 +27,7 @@ class CreateTaskPrioritiesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_priorities');
+        Schema::dropIfExists('task_priorities');
 	}
 
 }

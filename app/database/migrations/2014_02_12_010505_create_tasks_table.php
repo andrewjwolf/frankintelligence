@@ -21,9 +21,10 @@ class CreateTasksTable extends Migration {
 			$table->integer('status_id')->nullable();
 			$table->timestamps();
 
-            $table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
-            $table->foreign('priority_id')->references('id')->on('task_priorities')->onDelete('cascade');
-            $table->foreign('status_id')->references('id')->on('task_status')->onDelete('cascade');
+            //$table->foreign('id')->references('task_id')->on('tasks_assignments')->onDelete('cascade');
+            //$table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
+            //$table->foreign('priority_id')->references('id')->on('task_priorities')->onDelete('cascade');
+            //$table->foreign('status_id')->references('id')->on('task_status')->onDelete('cascade');
 		});
 	}
 
@@ -35,7 +36,7 @@ class CreateTasksTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('tasks');
+        Schema::dropIfExists('tasks');
 	}
 
 }

@@ -18,8 +18,8 @@ class CreateBoardsColumnsTable extends Migration {
 			$table->integer('column_id');
 			$table->timestamps();
 
-            $table->foreign('board_id')->references('id')->on('boards')->onDelete('cascade');
-            $table->foreign('column_id')->references('id')->on('columns')->onDelete('cascade');
+            //$table->foreign('board_id')->references('id')->on('boards')->onDelete('cascade');
+            //$table->foreign('column_id')->references('id')->on('columns')->onDelete('cascade');
 		});
 	}
 
@@ -31,7 +31,7 @@ class CreateBoardsColumnsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('boards_columns');
+        Schema::dropIfExists('boards_columns');
 	}
 
 }

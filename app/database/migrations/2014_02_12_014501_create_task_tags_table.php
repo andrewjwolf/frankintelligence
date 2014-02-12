@@ -17,8 +17,9 @@ class CreateTaskTagsTable extends Migration {
 			$table->integer('task_id');
 			$table->integer('tag_id');
 			$table->timestamps();
-            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
-            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+
+            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            //$table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
 		});
 	}
 
@@ -30,7 +31,7 @@ class CreateTaskTagsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_tags');
+        Schema::dropIfExists('task_tags');
 	}
 
 }

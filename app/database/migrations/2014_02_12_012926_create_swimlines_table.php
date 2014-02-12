@@ -18,7 +18,7 @@ class CreateSwimlinesTable extends Migration {
 			$table->integer('field_id');
 			$table->timestamps();
 
-            $table->foreign('field_id')->references('id')->on('fields')->onDelete('cascade');
+            //$table->foreign('field_id')->references('id')->on('fields')->onDelete('cascade');
 		});
 	}
 
@@ -30,7 +30,7 @@ class CreateSwimlinesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('swimlines');
+        Schema::dropIfExists('swimlines');
 	}
 
 }

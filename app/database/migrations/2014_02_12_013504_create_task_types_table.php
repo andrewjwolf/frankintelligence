@@ -27,7 +27,7 @@ class CreateTaskTypesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_types');
+        Schema::dropIfExists('task_types');
 	}
 
 }

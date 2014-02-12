@@ -18,8 +18,8 @@ class CreateTaskAttachmentsTable extends Migration {
 			$table->integer('attachment_id');
 			$table->timestamps();
 
-            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
-            $table->foreign('attachment_id')->references('id')->on('attachment')->onDelete('cascade');
+            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            //$table->foreign('attachment_id')->references('id')->on('attachment')->onDelete('cascade');
 		});
 	}
 
@@ -31,7 +31,7 @@ class CreateTaskAttachmentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_attachments');
+        Schema::dropIfExists('task_attachments');
 	}
 
 }

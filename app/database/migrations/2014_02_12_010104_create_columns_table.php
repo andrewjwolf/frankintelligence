@@ -27,7 +27,7 @@ class CreateColumnsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('columns');
+        Schema::dropIfExists('columns');
 	}
 
 }

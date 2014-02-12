@@ -18,8 +18,8 @@ class CreateProjectUserGroupsTable extends Migration {
 			$table->integer('user_group_id');
 			$table->timestamps();
 
-            $table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
-            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            //$table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
+            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
 		});
 	}
 
@@ -31,7 +31,7 @@ class CreateProjectUserGroupsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('project_user_groups');
+        Schema::dropIfExists('project_user_groups');
 	}
 
 }

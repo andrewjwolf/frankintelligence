@@ -18,8 +18,8 @@ class CreateUserGroupUsersTable extends Migration {
 			$table->integer('user_id');
 			$table->timestamps();
 
-            $table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 		});
 	}
 
@@ -31,7 +31,7 @@ class CreateUserGroupUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('user_group_users');
+        Schema::dropIfExists('user_group_users');
 	}
 
 }

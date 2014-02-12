@@ -18,7 +18,7 @@ class CreateAttachmentsTable extends Migration {
 			$table->string('path')->nullable();
 			$table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 		});
 	}
 
@@ -30,7 +30,7 @@ class CreateAttachmentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('attachments');
+        Schema::dropIfExists('attachments');
 	}
 
 }

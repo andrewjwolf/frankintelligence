@@ -18,8 +18,8 @@ class CreateProjectTasksTable extends Migration {
 			$table->integer('task_id');
 			$table->timestamps();
 
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
-            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            //$table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
 		});
 	}
 
@@ -31,7 +31,7 @@ class CreateProjectTasksTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('project_tasks');
+        Schema::dropIfExists('project_tasks');
 	}
 
 }

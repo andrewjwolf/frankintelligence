@@ -19,9 +19,9 @@ class CreateTaskLinksTable extends Migration {
 			$table->integer('task_link_id');
 			$table->timestamps();
 
-            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
-            $table->foreign('task_type_id')->references('id')->on('task_types')->onDelete('cascade');
-            $table->foreign('task_link_id')->references('id')->on('task_links')->onDelete('cascade');
+            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            //$table->foreign('task_type_id')->references('id')->on('task_types')->onDelete('cascade');
+            //$table->foreign('task_link_id')->references('id')->on('task_links')->onDelete('cascade');
 
 		});
 	}
@@ -34,7 +34,7 @@ class CreateTaskLinksTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_links');
+        Schema::dropIfExists('task_links');
 	}
 
 }

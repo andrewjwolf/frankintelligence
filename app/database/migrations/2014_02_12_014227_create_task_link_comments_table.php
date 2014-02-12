@@ -17,8 +17,9 @@ class CreateTaskLinkCommentsTable extends Migration {
 			$table->integer('task_link_id');
 			$table->integer('comment_id');
 			$table->timestamps();
-            $table->foreign('task_link_id')->references('id')->on('task_links')->onDelete('cascade');
-            $table->foreign('task_comment_id')->references('id')->on('task_comments')->onDelete('cascade');
+
+            //$table->foreign('task_link_id')->references('id')->on('task_links')->onDelete('cascade');
+            //$table->foreign('task_comment_id')->references('id')->on('task_comments')->onDelete('cascade');
 		});
 	}
 
@@ -30,7 +31,7 @@ class CreateTaskLinkCommentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_link_comments');
+        Schema::dropIfExists('task_link_comments');
 	}
 
 }

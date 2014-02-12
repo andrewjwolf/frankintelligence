@@ -14,12 +14,14 @@ class CreateTaskAssignmentsTable extends Migration {
 	{
 		Schema::create('task_assignments', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('task_id');
 			$table->integer('user_id')->nullable();
 			$table->integer('user_group_id')->nullable();
 			$table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
+            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
 
 		});
 	}
@@ -32,7 +34,7 @@ class CreateTaskAssignmentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_assignments');
+        Schema::dropIfExists('task_assignments');
 	}
 
 }

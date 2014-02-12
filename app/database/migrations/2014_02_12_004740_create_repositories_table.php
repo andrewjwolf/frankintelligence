@@ -28,7 +28,7 @@ class CreateRepositoriesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('repositories');
+        Schema::dropIfExists('repositories');
 	}
 
 }

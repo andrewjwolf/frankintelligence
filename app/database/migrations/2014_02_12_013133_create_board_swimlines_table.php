@@ -18,8 +18,8 @@ class CreateBoardSwimlinesTable extends Migration {
 			$table->integer('swimline_id');
 			$table->timestamps();
 
-            $table->foreign('board_id')->references('id')->on('boards')->onDelete('cascade');
-            $table->foreign('swimline_id')->references('id')->on('swimlines')->onDelete('cascade');
+            //$table->foreign('board_id')->references('id')->on('boards')->onDelete('cascade');
+            //$table->foreign('swimline_id')->references('id')->on('swimlines')->onDelete('cascade');
 		});
 	}
 
@@ -31,7 +31,7 @@ class CreateBoardSwimlinesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('board_swimlines');
+        Schema::dropIfExists('board_swimlines');
 	}
 
 }
