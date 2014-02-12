@@ -1,1 +1,1 @@
-show.blade
+{{ $data['user'] }}
