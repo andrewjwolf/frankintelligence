@@ -2,6 +2,10 @@
 
 class HomeController extends BaseController {
 
+    public function __construct()
+    {
+        $this->beforeFilter('auth');
+    }
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller

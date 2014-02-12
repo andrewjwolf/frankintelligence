@@ -16,13 +16,13 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::resource('users','UsersController');
+
 Route::resource('projects', 'ProjectsController');
 
 Route::resource('user_groups', 'User_groupsController');
 
 Route::resource('repositories', 'RepositoriesController');
-
-Route::resource('users', 'UsersController');
 
 Route::resource('fieldtypes', 'FieldtypesController');
 
