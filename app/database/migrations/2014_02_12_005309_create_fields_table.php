@@ -15,13 +15,13 @@ class CreateFieldsTable extends Migration {
 		Schema::create('fields', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->integer('field_type_id');
+			$table->unsignedInteger('field_type_id');
 			$table->integer('can_be_empty')->defaults(1);
 			$table->string('default_value')->nullable();
 			$table->string('empty_value')->nullable();
 			$table->timestamps();
 
-//            $table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
+            $table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
 		});
 	}
 

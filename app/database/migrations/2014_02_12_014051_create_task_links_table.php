@@ -14,14 +14,14 @@ class CreateTaskLinksTable extends Migration {
 	{
 		Schema::create('task_links', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('task_id');
-            $table->integer('link_type_id');
-			$table->integer('task_link_id');
+			$table->unsignedInteger('task_id');
+            $table->unsignedInteger('link_type_id');
+			$table->unsignedInteger('task_link_id');
 			$table->timestamps();
 
-            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
-            //$table->foreign('task_type_id')->references('id')->on('task_types')->onDelete('cascade');
-            //$table->foreign('task_link_id')->references('id')->on('task_links')->onDelete('cascade');
+            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            $table->foreign('link_type_id')->references('id')->on('task_types')->onDelete('cascade');
+
 
 		});
 	}

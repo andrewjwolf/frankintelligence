@@ -15,16 +15,20 @@ class CreateTasksTable extends Migration {
 		Schema::create('tasks', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('title');
-			$table->text('description')->nullable;
-			$table->integer('field_type_id')->nullable();
-			$table->integer('priority_id')->nullable();
-			$table->integer('status_id')->nullable();
+			$table->text('description');
+            $table->unsignedInteger('project_id');
+			$table->unsignedInteger('field_type_id')->nullable();
+			$table->unsignedInteger('priority_id')->nullable();
+			$table->unsignedInteger('status_id')->nullable();
 			$table->timestamps();
 
-            //$table->foreign('id')->references('task_id')->on('tasks_assignments')->onDelete('cascade');
-            //$table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
-            //$table->foreign('priority_id')->references('id')->on('task_priorities')->onDelete('cascade');
-            //$table->foreign('status_id')->references('id')->on('task_status')->onDelete('cascade');
+            $table->unique(array('project_id', 'id'));
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+
+
+            $table->foreign('field_type_id')->references('id')->on('field_types')->onDelete('cascade');
+            $table->foreign('priority_id')->references('id')->on('task_priorities')->onDelete('cascade');
+            $table->foreign('status_id')->references('id')->on('task_status')->onDelete('cascade');
 		});
 	}
 

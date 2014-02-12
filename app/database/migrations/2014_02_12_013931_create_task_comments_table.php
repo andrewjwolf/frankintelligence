@@ -14,12 +14,12 @@ class CreateTaskCommentsTable extends Migration {
 	{
 		Schema::create('task_comments', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('task_id');
-			$table->integer('comment_id');
+			$table->unsignedInteger('task_id');
+			$table->unsignedInteger('comment_id');
 			$table->timestamps();
 
-            //$table->foreign('tasks_id')->references('id')->on('tasks')->onDelete('cascade');
-            //$table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
+            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            $table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
 		});
 	}
 

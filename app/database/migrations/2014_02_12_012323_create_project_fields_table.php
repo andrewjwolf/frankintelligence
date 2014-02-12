@@ -14,11 +14,12 @@ class CreateProjectFieldsTable extends Migration {
 	{
 		Schema::create('project_fields', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('project_id');
-			$table->integer('field_id');
+			$table->unsignedInteger('project_id');
+			$table->unsignedInteger('field_id');
 			$table->timestamps();
 
-            //$table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            $table->foreign('field_id')->references('id')->on('fields')->onDelete('cascade');
 		});
 	}
 

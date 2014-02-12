@@ -14,12 +14,12 @@ class CreateProjectUserGroupsTable extends Migration {
 	{
 		Schema::create('project_user_groups', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('task_id');
-			$table->integer('user_group_id');
+			$table->unsignedInteger('project_id');
+			$table->unsignedInteger('user_group_id');
 			$table->timestamps();
 
-            //$table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
-            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            $table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
 		});
 	}
 

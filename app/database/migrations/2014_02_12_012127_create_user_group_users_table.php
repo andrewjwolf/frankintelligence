@@ -14,12 +14,12 @@ class CreateUserGroupUsersTable extends Migration {
 	{
 		Schema::create('user_group_users', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('user_group_id');
-			$table->integer('user_id');
+			$table->unsignedInteger('user_group_id');
+			$table->unsignedInteger('user_id');
 			$table->timestamps();
 
-            //$table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
-            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_group_id')->references('id')->on('user_groups')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 		});
 	}
 

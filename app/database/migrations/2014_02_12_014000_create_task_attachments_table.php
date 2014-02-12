@@ -14,12 +14,12 @@ class CreateTaskAttachmentsTable extends Migration {
 	{
 		Schema::create('task_attachments', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('task_id');
-			$table->integer('attachment_id');
+			$table->unsignedInteger('task_id');
+			$table->unsignedInteger('attachment_id');
 			$table->timestamps();
 
-            //$table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
-            //$table->foreign('attachment_id')->references('id')->on('attachment')->onDelete('cascade');
+            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            $table->foreign('attachment_id')->references('id')->on('attachments')->onDelete('cascade');
 		});
 	}
 

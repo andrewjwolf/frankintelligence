@@ -22,7 +22,98 @@
     <favorites_list name="frank" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="2014_02_12_012323_create_project_fields_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012323_create_project_fields_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_012926_create_swimlines_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012926_create_swimlines_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="35" selection-start="365" selection-end="365" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_013133_create_board_swimlines_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013133_create_board_swimlines_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="35" selection-start="389" selection-end="389" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_013504_create_task_types_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013504_create_task_types_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_013931_create_task_comments_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013931_create_task_comments_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="33" selection-start="424" selection-end="424" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_014000_create_task_attachments_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014000_create_task_attachments_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="11" selection-start="636" selection-end="636" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_011533_create_attachments_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachments_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="38" selection-start="458" selection-end="458" vertical-scroll-proportion="-8.153846" vertical-offset="111" max-vertical-offset="697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_014051_create_task_links_table.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014051_create_task_links_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="33" selection-start="600" selection-end="600" vertical-scroll-proportion="0.60714287" vertical-offset="51" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_014353_create_tags_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014353_create_tags_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_02_12_014501_create_task_tags_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014501_create_task_tags_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="12" selection-start="518" selection-end="518" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -32,43 +123,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/_ide_helper.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_005405_create_field_types_table.php" />
-        <option value="$PROJECT_DIR$/app/config/database.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachment_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013243_create_project_tasks_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_003727_create_projects_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_004818_create_users_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_004713_create_user_groups_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_010846_create_task_assignments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_011408_create_comments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012036_create_project_user_groups_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_005309_create_fields_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_005741_create_boards_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_010505_create_tasks_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_011408_create_comments_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachments_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012036_create_project_user_groups_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012127_create_user_group_users_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012323_create_project_fields_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012416_create_project_boards_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012517_create_boards_columns_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_012926_create_swimlines_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013133_create_board_swimlines_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013243_create_project_tasks_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013504_create_task_types_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014501_create_task_tags_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_013931_create_task_comments_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014000_create_task_attachments_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014051_create_task_links_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014227_create_task_link_comments_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_12_014501_create_task_tags_table.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1960" />
-    <option name="width" value="1880" />
-    <option name="height" value="1080" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -110,7 +189,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frank" />
+              <option name="myItemId" value="frankintelligence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -120,7 +199,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frank" />
+              <option name="myItemId" value="frankintelligence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -134,7 +213,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frank" />
+              <option name="myItemId" value="frankintelligence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -152,7 +231,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frank" />
+              <option name="myItemId" value="frankintelligence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -168,33 +247,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistory" value="create_task_types_table&#10;CreateTaskTypesTable&#10;create_attachmen&#10;create_attachments_table&#10;create_task_link_commen&#10;assignment&#10;assignme&#10;status&#10;type" />
+    <property name="last_opened_file_path" value="A:/ameriliv" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="27d04ae1-b22c-46cc-b4fd-fb32c91237ca">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="6f443b1c-b5ba-4f86-9bd8-6f4d3ee923e5">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="d49ed27f-0bda-475c-8286-b9cb12753853">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -222,16 +310,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1960" y="0" width="1880" height="1080" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32071504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33481646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27003294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27321237" sideWeight="0.66518354" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -241,8 +329,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -262,123 +350,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="46" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="143" selection-end="143" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11835" column="10" selection-start="367039" selection-end="367039" vertical-scroll-proportion="0.36787564" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="54" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.22972973" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="30" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.4006734" vertical-offset="816" max-vertical-offset="2210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_003727_create_projects_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="747" selection-end="747" vertical-scroll-proportion="-8.653846" vertical-offset="183" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_004713_create_user_groups_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="410" selection-end="410" vertical-scroll-proportion="-8.461538" vertical-offset="69" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_004740_create_repositories_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="33" selection-start="369" selection-end="369" vertical-scroll-proportion="-8.0" vertical-offset="64" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_004818_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="468" selection-end="468" vertical-scroll-proportion="-12.115385" vertical-offset="8" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_005309_create_fields_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="79" selection-start="618" selection-end="618" vertical-scroll-proportion="-10.769231" vertical-offset="94" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_005405_create_field_types_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="52" selection-start="271" selection-end="271" vertical-scroll-proportion="-7.5" vertical-offset="26" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_005741_create_boards_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="73" selection-start="510" selection-end="510" vertical-scroll-proportion="-11.115385" vertical-offset="51" max-vertical-offset="714">
+        <state line="31" column="29" selection-start="622" selection-end="622" vertical-scroll-proportion="-13.153846" vertical-offset="168" max-vertical-offset="782">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_010104_create_columns_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_005308_create_field_types_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+        <state line="14" column="52" selection-start="271" selection-end="271" vertical-scroll-proportion="0.35714287" vertical-offset="26" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_010505_create_tasks_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="11" selection-start="856" selection-end="856" vertical-scroll-proportion="-13.076923" vertical-offset="85" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_010846_create_task_assignments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="455" selection-end="534" vertical-scroll-proportion="-10.769231" vertical-offset="43" max-vertical-offset="731">
+        <state line="18" column="20" selection-start="384" selection-end="399" vertical-scroll-proportion="-5.5384617" vertical-offset="145" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_011408_create_comments_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="91" selection-start="486" selection-end="486" vertical-scroll-proportion="-10.769231" vertical-offset="43" max-vertical-offset="697">
+        <state line="19" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="-10.115385" vertical-offset="43" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012036_create_project_user_groups_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="341" selection-end="356" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012127_create_user_group_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="47" selection-start="585" selection-end="585" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012323_create_project_fields_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_012926_create_swimlines_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="35" selection-start="365" selection-end="365" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013133_create_board_swimlines_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="35" selection-start="389" selection-end="389" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013504_create_task_types_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014353_create_tags_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014501_create_task_tags_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="12" selection-start="518" selection-end="518" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_013931_create_task_comments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="33" selection-start="424" selection-end="424" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_011533_create_attachments_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="91" selection-start="503" selection-end="503" vertical-scroll-proportion="-10.769231" vertical-offset="43" max-vertical-offset="697">
+        <state line="20" column="38" selection-start="458" selection-end="458" vertical-scroll-proportion="-8.153846" vertical-offset="111" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014000_create_task_attachments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="11" selection-start="636" selection-end="636" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_12_014051_create_task_links_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="33" selection-start="600" selection-end="600" vertical-scroll-proportion="0.60714287" vertical-offset="51" max-vertical-offset="765">
           <folding />
         </state>
       </provider>

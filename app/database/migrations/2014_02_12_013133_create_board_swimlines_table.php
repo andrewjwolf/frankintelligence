@@ -14,12 +14,12 @@ class CreateBoardSwimlinesTable extends Migration {
 	{
 		Schema::create('board_swimlines', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('board_id');
-			$table->integer('swimline_id');
+			$table->unsignedInteger('board_id');
+			$table->unsignedInteger('swimline_id');
 			$table->timestamps();
 
-            //$table->foreign('board_id')->references('id')->on('boards')->onDelete('cascade');
-            //$table->foreign('swimline_id')->references('id')->on('swimlines')->onDelete('cascade');
+            $table->foreign('board_id')->references('id')->on('boards')->onDelete('cascade');
+            $table->foreign('swimline_id')->references('id')->on('swimlines')->onDelete('cascade');
 		});
 	}
 
