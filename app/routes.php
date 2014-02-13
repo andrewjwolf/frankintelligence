@@ -1,49 +1,52 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+    /*
+    |--------------------------------------------------------------------------
+    | Application Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you can register all of the routes for an application.
+    | It's a breeze. Simply tell Laravel the URIs it should respond to
+    | and give it the Closure to execute when that URI is requested.
+    |
+    */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+    Route::get('login', array('uses' => 'LoginController@index'));
+    Route::post('login', array('uses' => 'LoginController@postAction'));
 
-Route::resource('users','UsersController');
 
-Route::resource('projects', 'ProjectsController');
+    Route::get('/', function () {
+        return View::make('hello');
+    });
 
-Route::resource('user_groups', 'User_groupsController');
+    Route::resource('users', 'UsersController');
 
-Route::resource('repositories', 'RepositoriesController');
+    Route::resource('projects', 'ProjectsController');
 
-Route::resource('fieldtypes', 'FieldtypesController');
+    Route::resource('user_groups', 'User_groupsController');
 
-Route::resource('field_types', 'Field_typesController');
+    Route::resource('repositories', 'RepositoriesController');
 
-Route::resource('fields', 'FieldsController');
+    Route::resource('fieldtypes', 'FieldtypesController');
 
-Route::resource('boards', 'BoardsController');
+    Route::resource('field_types', 'Field_typesController');
 
-Route::resource('columns', 'ColumnsController');
+    Route::resource('fields', 'FieldsController');
 
-Route::resource('statuses', 'StatusesController');
+    Route::resource('boards', 'BoardsController');
 
-Route::resource('priorities', 'PrioritiesController');
+    Route::resource('columns', 'ColumnsController');
 
-Route::resource('tasks', 'TasksController');
+    Route::resource('statuses', 'StatusesController');
 
-Route::resource('comments', 'CommentsController');
+    Route::resource('priorities', 'PrioritiesController');
 
-Route::resource('attachments', 'AttachmentsController');
+    Route::resource('tasks', 'TasksController');
 
-Route::resource('swimlines', 'SwimlinesController');
+    Route::resource('comments', 'CommentsController');
 
-Route::resource('tags', 'TagsController');
+    Route::resource('attachments', 'AttachmentsController');
+
+    Route::resource('swimlines', 'SwimlinesController');
+
+    Route::resource('tags', 'TagsController');

@@ -17,7 +17,11 @@ class UsersController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('users.index');
+        $data =
+            array(
+                'users' => User::all()
+            );
+        return View::make('users.index')->with('data',$data);
 	}
 
 	/**
