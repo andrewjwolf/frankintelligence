@@ -2,18 +2,28 @@
 
 class TasksController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Task Repository
+	 *
+	 * @var Task
+	 */
+	protected $task;
+
+	public function __construct(Task $task)
+	{
+		$this->task = $task;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('tasks.index');
+		$tasks = $this->task->all();
+
+		return View::make('tasks.index', compact('tasks'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class TasksController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('tasks.create');
+		return View::make('tasks.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class TasksController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Task::$rules);
+
+		if ($validation->passes())
+		{
+			$this->task->create($input);
+
+			return Redirect::route('tasks.index');
+		}
+
+		return Redirect::route('tasks.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class TasksController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('tasks.show');
+		$task = $this->task->findOrFail($id);
+
+		return View::make('tasks.show', compact('task'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class TasksController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('tasks.edit');
+		$task = $this->task->find($id);
+
+		if (is_null($task))
+		{
+			return Redirect::route('tasks.index');
+		}
+
+		return View::make('tasks.edit', compact('task'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class TasksController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Task::$rules);
+
+		if ($validation->passes())
+		{
+			$task = $this->task->find($id);
+			$task->update($input);
+
+			return Redirect::route('tasks.show', $id);
+		}
+
+		return Redirect::route('tasks.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class TasksController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->task->find($id)->delete();
+
+		return Redirect::route('tasks.index');
 	}
 
 }

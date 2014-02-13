@@ -2,18 +2,28 @@
 
 class CommentsController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Comment Repository
+	 *
+	 * @var Comment
+	 */
+	protected $comment;
+
+	public function __construct(Comment $comment)
+	{
+		$this->comment = $comment;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('comments.index');
+		$comments = $this->comment->all();
+
+		return View::make('comments.index', compact('comments'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class CommentsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('comments.create');
+		return View::make('comments.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class CommentsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Comment::$rules);
+
+		if ($validation->passes())
+		{
+			$this->comment->create($input);
+
+			return Redirect::route('comments.index');
+		}
+
+		return Redirect::route('comments.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class CommentsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('comments.show');
+		$comment = $this->comment->findOrFail($id);
+
+		return View::make('comments.show', compact('comment'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class CommentsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('comments.edit');
+		$comment = $this->comment->find($id);
+
+		if (is_null($comment))
+		{
+			return Redirect::route('comments.index');
+		}
+
+		return View::make('comments.edit', compact('comment'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class CommentsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Comment::$rules);
+
+		if ($validation->passes())
+		{
+			$comment = $this->comment->find($id);
+			$comment->update($input);
+
+			return Redirect::route('comments.show', $id);
+		}
+
+		return Redirect::route('comments.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class CommentsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->comment->find($id)->delete();
+
+		return Redirect::route('comments.index');
 	}
 
 }

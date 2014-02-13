@@ -2,18 +2,28 @@
 
 class PrioritiesController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Priority Repository
+	 *
+	 * @var Priority
+	 */
+	protected $prioritie;
+
+	public function __construct(Priority $prioritie)
+	{
+		$this->prioritie = $prioritie;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('priorities.index');
+		$priorities = $this->prioritie->all();
+
+		return View::make('priorities.index', compact('priorities'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class PrioritiesController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('priorities.create');
+		return View::make('priorities.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class PrioritiesController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Priority::$rules);
+
+		if ($validation->passes())
+		{
+			$this->prioritie->create($input);
+
+			return Redirect::route('priorities.index');
+		}
+
+		return Redirect::route('priorities.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class PrioritiesController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('priorities.show');
+		$prioritie = $this->prioritie->findOrFail($id);
+
+		return View::make('priorities.show', compact('prioritie'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class PrioritiesController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('priorities.edit');
+		$prioritie = $this->prioritie->find($id);
+
+		if (is_null($prioritie))
+		{
+			return Redirect::route('priorities.index');
+		}
+
+		return View::make('priorities.edit', compact('prioritie'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class PrioritiesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Priority::$rules);
+
+		if ($validation->passes())
+		{
+			$prioritie = $this->prioritie->find($id);
+			$prioritie->update($input);
+
+			return Redirect::route('priorities.show', $id);
+		}
+
+		return Redirect::route('priorities.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class PrioritiesController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->prioritie->find($id)->delete();
+
+		return Redirect::route('priorities.index');
 	}
 
 }

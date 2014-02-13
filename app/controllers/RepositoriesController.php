@@ -2,18 +2,28 @@
 
 class RepositoriesController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Repository Repository
+	 *
+	 * @var Repository
+	 */
+	protected $repositorie;
+
+	public function __construct(Repository $repositorie)
+	{
+		$this->repositorie = $repositorie;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('repositories.index');
+		$repositories = $this->repositorie->all();
+
+		return View::make('repositories.index', compact('repositories'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class RepositoriesController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('repositories.create');
+		return View::make('repositories.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class RepositoriesController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Repository::$rules);
+
+		if ($validation->passes())
+		{
+			$this->repositorie->create($input);
+
+			return Redirect::route('repositories.index');
+		}
+
+		return Redirect::route('repositories.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class RepositoriesController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('repositories.show');
+		$repositorie = $this->repositorie->findOrFail($id);
+
+		return View::make('repositories.show', compact('repositorie'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class RepositoriesController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('repositories.edit');
+		$repositorie = $this->repositorie->find($id);
+
+		if (is_null($repositorie))
+		{
+			return Redirect::route('repositories.index');
+		}
+
+		return View::make('repositories.edit', compact('repositorie'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class RepositoriesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Repository::$rules);
+
+		if ($validation->passes())
+		{
+			$repositorie = $this->repositorie->find($id);
+			$repositorie->update($input);
+
+			return Redirect::route('repositories.show', $id);
+		}
+
+		return Redirect::route('repositories.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class RepositoriesController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->repositorie->find($id)->delete();
+
+		return Redirect::route('repositories.index');
 	}
 
 }

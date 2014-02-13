@@ -21,7 +21,7 @@ class CreateProjectsTable extends Migration {
 			$table->text('description')->nullable();
 			$table->string('from_email')->nullable();
 			$table->boolean('has_time_tracking')->default(0);
-			$table->integer('has_estimate')->default(0);
+			$table->boolean('has_estimate')->default(0);
 			$table->unsignedInteger('estimate_field_id')->nullable();
 			$table->timestamps();
 		});

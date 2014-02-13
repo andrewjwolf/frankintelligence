@@ -1,6 +1,6 @@
 <?php
 
-class Repositorie extends Eloquent {
+class Status extends Eloquent {
 	protected $guarded = array();
 
 	public static $rules = array();

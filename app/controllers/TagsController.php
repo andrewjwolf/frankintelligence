@@ -2,18 +2,28 @@
 
 class TagsController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Tag Repository
+	 *
+	 * @var Tag
+	 */
+	protected $tag;
+
+	public function __construct(Tag $tag)
+	{
+		$this->tag = $tag;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('tags.index');
+		$tags = $this->tag->all();
+
+		return View::make('tags.index', compact('tags'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class TagsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('tags.create');
+		return View::make('tags.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class TagsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Tag::$rules);
+
+		if ($validation->passes())
+		{
+			$this->tag->create($input);
+
+			return Redirect::route('tags.index');
+		}
+
+		return Redirect::route('tags.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class TagsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('tags.show');
+		$tag = $this->tag->findOrFail($id);
+
+		return View::make('tags.show', compact('tag'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class TagsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('tags.edit');
+		$tag = $this->tag->find($id);
+
+		if (is_null($tag))
+		{
+			return Redirect::route('tags.index');
+		}
+
+		return View::make('tags.edit', compact('tag'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class TagsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Tag::$rules);
+
+		if ($validation->passes())
+		{
+			$tag = $this->tag->find($id);
+			$tag->update($input);
+
+			return Redirect::route('tags.show', $id);
+		}
+
+		return Redirect::route('tags.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class TagsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->tag->find($id)->delete();
+
+		return Redirect::route('tags.index');
 	}
 
 }

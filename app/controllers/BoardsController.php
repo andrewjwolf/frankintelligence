@@ -2,18 +2,28 @@
 
 class BoardsController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Board Repository
+	 *
+	 * @var Board
+	 */
+	protected $board;
+
+	public function __construct(Board $board)
+	{
+		$this->board = $board;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('boards.index');
+		$boards = $this->board->all();
+
+		return View::make('boards.index', compact('boards'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class BoardsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('boards.create');
+		return View::make('boards.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class BoardsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Board::$rules);
+
+		if ($validation->passes())
+		{
+			$this->board->create($input);
+
+			return Redirect::route('boards.index');
+		}
+
+		return Redirect::route('boards.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class BoardsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('boards.show');
+		$board = $this->board->findOrFail($id);
+
+		return View::make('boards.show', compact('board'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class BoardsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('boards.edit');
+		$board = $this->board->find($id);
+
+		if (is_null($board))
+		{
+			return Redirect::route('boards.index');
+		}
+
+		return View::make('boards.edit', compact('board'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class BoardsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Board::$rules);
+
+		if ($validation->passes())
+		{
+			$board = $this->board->find($id);
+			$board->update($input);
+
+			return Redirect::route('boards.show', $id);
+		}
+
+		return Redirect::route('boards.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class BoardsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->board->find($id)->delete();
+
+		return Redirect::route('boards.index');
 	}
 
 }

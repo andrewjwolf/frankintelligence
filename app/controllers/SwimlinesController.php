@@ -2,18 +2,28 @@
 
 class SwimlinesController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Swimline Repository
+	 *
+	 * @var Swimline
+	 */
+	protected $swimline;
+
+	public function __construct(Swimline $swimline)
+	{
+		$this->swimline = $swimline;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('swimlines.index');
+		$swimlines = $this->swimline->all();
+
+		return View::make('swimlines.index', compact('swimlines'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class SwimlinesController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('swimlines.create');
+		return View::make('swimlines.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class SwimlinesController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Swimline::$rules);
+
+		if ($validation->passes())
+		{
+			$this->swimline->create($input);
+
+			return Redirect::route('swimlines.index');
+		}
+
+		return Redirect::route('swimlines.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class SwimlinesController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('swimlines.show');
+		$swimline = $this->swimline->findOrFail($id);
+
+		return View::make('swimlines.show', compact('swimline'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class SwimlinesController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('swimlines.edit');
+		$swimline = $this->swimline->find($id);
+
+		if (is_null($swimline))
+		{
+			return Redirect::route('swimlines.index');
+		}
+
+		return View::make('swimlines.edit', compact('swimline'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class SwimlinesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Swimline::$rules);
+
+		if ($validation->passes())
+		{
+			$swimline = $this->swimline->find($id);
+			$swimline->update($input);
+
+			return Redirect::route('swimlines.show', $id);
+		}
+
+		return Redirect::route('swimlines.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class SwimlinesController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->swimline->find($id)->delete();
+
+		return Redirect::route('swimlines.index');
 	}
 
 }

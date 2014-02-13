@@ -1,6 +1,6 @@
 <?php
 
-class Prioritie extends Eloquent {
+class Priority extends Eloquent {
 	protected $guarded = array();
 
 	public static $rules = array();

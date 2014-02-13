@@ -2,18 +2,28 @@
 
 class ProjectsController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Project Repository
+	 *
+	 * @var Project
+	 */
+	protected $project;
+
+	public function __construct(Project $project)
+	{
+		$this->project = $project;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('projects.index');
+		$projects = $this->project->all();
+
+		return View::make('projects.index', compact('projects'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class ProjectsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('projects.create');
+		return View::make('projects.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class ProjectsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Project::$rules);
+
+		if ($validation->passes())
+		{
+			$this->project->create($input);
+
+			return Redirect::route('projects.index');
+		}
+
+		return Redirect::route('projects.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class ProjectsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('projects.show');
+		$project = $this->project->findOrFail($id);
+
+		return View::make('projects.show', compact('project'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class ProjectsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('projects.edit');
+		$project = $this->project->find($id);
+
+		if (is_null($project))
+		{
+			return Redirect::route('projects.index');
+		}
+
+		return View::make('projects.edit', compact('project'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class ProjectsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Project::$rules);
+
+		if ($validation->passes())
+		{
+			$project = $this->project->find($id);
+			$project->update($input);
+
+			return Redirect::route('projects.show', $id);
+		}
+
+		return Redirect::route('projects.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class ProjectsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->project->find($id)->delete();
+
+		return Redirect::route('projects.index');
 	}
 
 }

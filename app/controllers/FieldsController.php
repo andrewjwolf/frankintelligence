@@ -2,18 +2,28 @@
 
 class FieldsController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-    /**
+	/**
+	 * Field Repository
+	 *
+	 * @var Field
+	 */
+	protected $field;
+
+	public function __construct(Field $field)
+	{
+		$this->field = $field;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('fields.index');
+		$fields = $this->field->all();
+
+		return View::make('fields.index', compact('fields'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class FieldsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('fields.create');
+		return View::make('fields.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class FieldsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Field::$rules);
+
+		if ($validation->passes())
+		{
+			$this->field->create($input);
+
+			return Redirect::route('fields.index');
+		}
+
+		return Redirect::route('fields.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class FieldsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('fields.show');
+		$field = $this->field->findOrFail($id);
+
+		return View::make('fields.show', compact('field'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class FieldsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('fields.edit');
+		$field = $this->field->find($id);
+
+		if (is_null($field))
+		{
+			return Redirect::route('fields.index');
+		}
+
+		return View::make('fields.edit', compact('field'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class FieldsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Field::$rules);
+
+		if ($validation->passes())
+		{
+			$field = $this->field->find($id);
+			$field->update($input);
+
+			return Redirect::route('fields.show', $id);
+		}
+
+		return Redirect::route('fields.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class FieldsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->field->find($id)->delete();
+
+		return Redirect::route('fields.index');
 	}
 
 }

@@ -2,10 +2,18 @@
 
 class AttachmentsController extends BaseController {
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
+	/**
+	 * Attachment Repository
+	 *
+	 * @var Attachment
+	 */
+	protected $attachment;
+
+	public function __construct(Attachment $attachment)
+	{
+		$this->attachment = $attachment;
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -13,7 +21,9 @@ class AttachmentsController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('attachments.index');
+		$attachments = $this->attachment->all();
+
+		return View::make('attachments.index', compact('attachments'));
 	}
 
 	/**
@@ -23,7 +33,7 @@ class AttachmentsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('attachments.create');
+		return View::make('attachments.create');
 	}
 
 	/**
@@ -33,7 +43,20 @@ class AttachmentsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, Attachment::$rules);
+
+		if ($validation->passes())
+		{
+			$this->attachment->create($input);
+
+			return Redirect::route('attachments.index');
+		}
+
+		return Redirect::route('attachments.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -44,7 +67,9 @@ class AttachmentsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('attachments.show');
+		$attachment = $this->attachment->findOrFail($id);
+
+		return View::make('attachments.show', compact('attachment'));
 	}
 
 	/**
@@ -55,7 +80,14 @@ class AttachmentsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('attachments.edit');
+		$attachment = $this->attachment->find($id);
+
+		if (is_null($attachment))
+		{
+			return Redirect::route('attachments.index');
+		}
+
+		return View::make('attachments.edit', compact('attachment'));
 	}
 
 	/**
@@ -66,7 +98,21 @@ class AttachmentsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, Attachment::$rules);
+
+		if ($validation->passes())
+		{
+			$attachment = $this->attachment->find($id);
+			$attachment->update($input);
+
+			return Redirect::route('attachments.show', $id);
+		}
+
+		return Redirect::route('attachments.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -77,7 +123,9 @@ class AttachmentsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->attachment->find($id)->delete();
+
+		return Redirect::route('attachments.index');
 	}
 
 }

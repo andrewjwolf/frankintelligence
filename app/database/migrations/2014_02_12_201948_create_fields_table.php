@@ -16,7 +16,7 @@ class CreateFieldsTable extends Migration {
 			$table->increments('id');
 			$table->string('name');
 			$table->unsignedInteger('field_type_id');
-            $table->integer('can_be_empty')->defaults(1);
+            $table->boolean('can_be_empty')->defaults(1);
             $table->string('default_value')->nullable();
             $table->string('empty_value')->nullable();
 			$table->timestamps();

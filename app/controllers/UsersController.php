@@ -2,26 +2,28 @@
 
 class UsersController extends BaseController {
 
+	/**
+	 * User Repository
+	 *
+	 * @var User
+	 */
+	protected $user;
 
+	public function __construct(User $user)
+	{
+		$this->user = $user;
+	}
 
-    public function __construct()
-    {
-        $this->beforeFilter('auth');
-    }
-
-
-    /**
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        $data =
-            array(
-                'users' => User::all()
-            );
-        return View::make('users.index')->with('data',$data);
+		$users = $this->user->all();
+
+		return View::make('users.index', compact('users'));
 	}
 
 	/**
@@ -31,7 +33,7 @@ class UsersController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('users.create');
+		return View::make('users.create');
 	}
 
 	/**
@@ -41,7 +43,20 @@ class UsersController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$validation = Validator::make($input, User::$rules);
+
+		if ($validation->passes())
+		{
+			$this->user->create($input);
+
+			return Redirect::route('users.index');
+		}
+
+		return Redirect::route('users.create')
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -52,11 +67,9 @@ class UsersController extends BaseController {
 	 */
 	public function show($id)
 	{
-        $data =
-            array(
-                'user' => User::find($id)
-            );
-        return View::make('users.show')->with('data',$data);
+		$user = $this->user->findOrFail($id);
+
+		return View::make('users.show', compact('user'));
 	}
 
 	/**
@@ -67,7 +80,14 @@ class UsersController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('users.edit');
+		$user = $this->user->find($id);
+
+		if (is_null($user))
+		{
+			return Redirect::route('users.index');
+		}
+
+		return View::make('users.edit', compact('user'));
 	}
 
 	/**
@@ -78,7 +98,21 @@ class UsersController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = array_except(Input::all(), '_method');
+		$validation = Validator::make($input, User::$rules);
+
+		if ($validation->passes())
+		{
+			$user = $this->user->find($id);
+			$user->update($input);
+
+			return Redirect::route('users.show', $id);
+		}
+
+		return Redirect::route('users.edit', $id)
+			->withInput()
+			->withErrors($validation)
+			->with('message', 'There were validation errors.');
 	}
 
 	/**
@@ -89,7 +123,9 @@ class UsersController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->user->find($id)->delete();
+
+		return Redirect::route('users.index');
 	}
 
 }
